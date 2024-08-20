@@ -8,3 +8,7 @@ The GUI is developed in the PyQt5 designer.
 The purpose is to show a setting that was missing in the original game's settings menu.
 
 ![everspace2_settings_gui jpeg](https://github.com/user-attachments/assets/5af63ec6-69ca-49c5-9e68-2fb15fec86e9)
+
+How to use:
+*  Download all files.
+*  Run everspace2_settings.py file.
