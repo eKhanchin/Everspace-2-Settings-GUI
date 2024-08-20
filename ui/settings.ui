@@ -1,0 +1,1438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>734</width>
+    <height>415</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <weight>50</weight>
+    <bold>false</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Everspace2 Settings Example</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QTabWidget::tab-bar {
+	alignment: center;
+ }
+
+QProgressBar {
+    border: 1px solid grey;
+    border-radius: 5px;
+	height: 2px;
+}
+
+QProgressBar::chunk {
+    background-color: lightblue;
+    width: 20px;
+	margin: 0.5px;
+}
+
+QGroupBox#markers_icons_group_box {
+	background-color: lightblue;
+}
+
+QPushButton#apply_settings_button {
+	height: 40px;
+	padding-left: 24px;
+	padding-right: 24px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="settings_tab_widget">
+      <property name="tabPosition">
+       <enum>QTabWidget::North</enum>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="tabsClosable">
+       <bool>false</bool>
+      </property>
+      <property name="movable">
+       <bool>false</bool>
+      </property>
+      <property name="tabBarAutoHide">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="graphics_tab">
+       <attribute name="title">
+        <string>GRAPHICS</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QGroupBox" name="display_group_box">
+          <property name="title">
+           <string>DISPLAY</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="1" column="2">
+            <widget class="QPushButton" name="toggle_previous_deficiency_mode_button">
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="gamma_label">
+             <property name="text">
+              <string>Gamma</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QLabel" name="gamma_value_label">
+             <property name="text">
+              <string>0.50</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QProgressBar" name="gamma_progress_bar">
+             <property name="maximum">
+              <number>20</number>
+             </property>
+             <property name="value">
+              <number>10</number>
+             </property>
+             <property name="textVisible">
+              <bool>false</bool>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="invertedAppearance">
+              <bool>false</bool>
+             </property>
+             <property name="textDirection">
+              <enum>QProgressBar::TopToBottom</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QLabel" name="deficiency_mode_value_label">
+             <property name="text">
+              <string>Off</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="color_deficiency_mode_label">
+             <property name="text">
+              <string>Color Vision Deficiency Mode</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="2">
+            <widget class="QPushButton" name="decrease_gamma_button">
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+             <property name="autoDefault">
+              <bool>false</bool>
+             </property>
+             <property name="default">
+              <bool>false</bool>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QPushButton" name="toggle_next_deficiency_mode_button">
+             <property name="text">
+              <string>&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QPushButton" name="increase_gamma_button">
+             <property name="text">
+              <string>&gt;</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="miscellaneous_group_box">
+          <property name="title">
+           <string>MISCELLANEOUS</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>Lens Flares</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QPushButton" name="toggle_next_chromatic_aberration_button">
+             <property name="text">
+              <string>&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QLabel" name="chromatic_aberration_value_label">
+             <property name="text">
+              <string>On</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>Chromatic Aberration</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QPushButton" name="toggle_previous_lens_flares_button">
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QPushButton" name="toggle_previous_chromatic_aberration_button">
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QLabel" name="lens_flares_value_label">
+             <property name="text">
+              <string>On</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QPushButton" name="toggle_previous_motion_blur_button">
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="4">
+            <widget class="QPushButton" name="toggle_next_lens_flares_button">
+             <property name="text">
+              <string>&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>Motion Blur</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QPushButton" name="toggle_next_motion_blur_button">
+             <property name="text">
+              <string>&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="3">
+            <widget class="QLabel" name="motion_blur_value_label">
+             <property name="text">
+              <string>On</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="audio_tab">
+       <attribute name="title">
+        <string>AUDIO</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QGroupBox" name="volumes_group_box">
+          <property name="title">
+           <string>VOLUMES</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="6" column="0">
+            <widget class="QLabel" name="label_10">
+             <property name="text">
+              <string>Video</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QPushButton" name="increase_master_button">
+             <property name="text">
+              <string>&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QProgressBar" name="video_progress_bar">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>20</number>
+             </property>
+             <property name="value">
+              <number>15</number>
+             </property>
+             <property name="textVisible">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QPushButton" name="decrease_atmo_button">
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QPushButton" name="decrease_music_button">
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QProgressBar" name="voice_progress_bar">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>20</number>
+             </property>
+             <property name="value">
+              <number>16</number>
+             </property>
+             <property name="textVisible">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>Master</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="2">
+            <widget class="QPushButton" name="decrease_background_chatter_button">
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QProgressBar" name="master_progress_bar">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>20</number>
+             </property>
+             <property name="value">
+              <number>15</number>
+             </property>
+             <property name="textVisible">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="2">
+            <widget class="QPushButton" name="decrease_wireless_controller_speaker_button">
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QProgressBar" name="music_progress_bar">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>20</number>
+             </property>
+             <property name="value">
+              <number>15</number>
+             </property>
+             <property name="textVisible">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QProgressBar" name="atmo_progress_bar">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>20</number>
+             </property>
+             <property name="value">
+              <number>15</number>
+             </property>
+             <property name="textVisible">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_5">
+             <property name="text">
+              <string>Music</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="label_11">
+             <property name="text">
+              <string>Wireless Controller Speaker</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QPushButton" name="decrease_master_button">
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QProgressBar" name="background_chatter_progress_bar">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>20</number>
+             </property>
+             <property name="value">
+              <number>15</number>
+             </property>
+             <property name="textVisible">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_9">
+             <property name="text">
+              <string>Background Chatter</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QPushButton" name="increase_music_button">
+             <property name="text">
+              <string>&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="2">
+            <widget class="QPushButton" name="decrease_video_button">
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QPushButton" name="decrease_sfx_button">
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QProgressBar" name="sfx_progress_bar">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>20</number>
+             </property>
+             <property name="value">
+              <number>15</number>
+             </property>
+             <property name="textVisible">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1">
+            <widget class="QProgressBar" name="wireless_controller_speaker_progress_bar">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>20</number>
+             </property>
+             <property name="value">
+              <number>10</number>
+             </property>
+             <property name="textVisible">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="2">
+            <widget class="QPushButton" name="decrease_voice_button">
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QLabel" name="master_value_label">
+             <property name="text">
+              <string>75</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_6">
+             <property name="text">
+              <string>SFX</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string>Atmo</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="4">
+            <widget class="QPushButton" name="increase_sfx_button">
+             <property name="text">
+              <string>&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_8">
+             <property name="text">
+              <string>Voice</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="4">
+            <widget class="QPushButton" name="increase_atmo_button">
+             <property name="text">
+              <string>&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="4">
+            <widget class="QPushButton" name="increase_voice_button">
+             <property name="text">
+              <string>&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="4">
+            <widget class="QPushButton" name="increase_background_chatter_button">
+             <property name="text">
+              <string>&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="4">
+            <widget class="QPushButton" name="increase_video_button">
+             <property name="text">
+              <string>&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="4">
+            <widget class="QPushButton" name="increase_wireless_controller_speaker_button">
+             <property name="text">
+              <string>&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QLabel" name="music_value_label">
+             <property name="text">
+              <string>75</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QLabel" name="sfx_value_label">
+             <property name="text">
+              <string>75</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QLabel" name="atmo_value_label">
+             <property name="text">
+              <string>75</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="3">
+            <widget class="QLabel" name="voice_value_label">
+             <property name="text">
+              <string>80</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="3">
+            <widget class="QLabel" name="background_chatter_value_label">
+             <property name="text">
+              <string>75</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="3">
+            <widget class="QLabel" name="video_value_label">
+             <property name="text">
+              <string>75</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="3">
+            <widget class="QLabel" name="wireless_controller_speaker_value_label">
+             <property name="text">
+              <string>50</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="language_group_box">
+          <property name="title">
+           <string>LANGUAGE</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="0" column="2">
+            <widget class="QPushButton" name="toggle_previous_spoken_language_button">
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QPushButton" name="toggle_next_spoken_language_button">
+             <property name="text">
+              <string>&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_20">
+             <property name="text">
+              <string>Spoken Language</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <spacer name="horizontalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="3">
+            <widget class="QLabel" name="spoken_language_value_label">
+             <property name="text">
+              <string>English</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="input_tab">
+       <attribute name="title">
+        <string>INPUT</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QGroupBox" name="groupBox">
+          <property name="title">
+           <string>SENSITIVITY</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_14">
+             <property name="text">
+              <string>Auto Aiming Strength</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QLabel" name="input_smoothing_value_label">
+             <property name="text">
+              <string>On</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_12">
+             <property name="text">
+              <string>Input Smoothing</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QLabel" name="auto_aiming_strength_value_label">
+             <property name="text">
+              <string>0.50</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QPushButton" name="toggle_previous_input_smoothing_button">
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QProgressBar" name="auto_aiming_strength_progress_bar">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>20</number>
+             </property>
+             <property name="value">
+              <number>10</number>
+             </property>
+             <property name="textVisible">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QPushButton" name="toggle_previous_auto_aiming_strength_button">
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QPushButton" name="toggle_next_input_smoothing_button">
+             <property name="text">
+              <string>&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QPushButton" name="toggle_next_auto_aiming_strength_button">
+             <property name="text">
+              <string>&gt;</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="title">
+           <string>AXIS INVERSIONS</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_21">
+             <property name="text">
+              <string>Camera Yaw Input</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <spacer name="horizontalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="2">
+            <widget class="QPushButton" name="toggle_previous_pitch_input_button">
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_17">
+             <property name="text">
+              <string>Yaw Input</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_16">
+             <property name="text">
+              <string>Pitch Input</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_18">
+             <property name="text">
+              <string>Roll Input</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_19">
+             <property name="text">
+              <string>Camera Pitch Input</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QLabel" name="pitch_input_value_label">
+             <property name="text">
+              <string>Not Inverted</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QPushButton" name="toggle_next_pitch_input_button">
+             <property name="text">
+              <string>&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QPushButton" name="toggle_previous_yaw_input_button">
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QPushButton" name="toggle_previous_roll_input_button">
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QPushButton" name="toggle_previous_camera_pitch_input_button">
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="2">
+            <widget class="QPushButton" name="toggle_previous_camera_yaw_input_button">
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QPushButton" name="toggle_next_yaw_input_button">
+             <property name="text">
+              <string>&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="4">
+            <widget class="QPushButton" name="toggle_next_roll_input_button">
+             <property name="text">
+              <string>&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="4">
+            <widget class="QPushButton" name="toggle_next_camera_pitch_input_button">
+             <property name="text">
+              <string>&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="4">
+            <widget class="QPushButton" name="toggle_next_camera_yaw_input_button">
+             <property name="text">
+              <string>&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QLabel" name="yaw_input_value_label">
+             <property name="text">
+              <string>Not Inverted</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QLabel" name="roll_input_value_label">
+             <property name="text">
+              <string>Not Inverted</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QLabel" name="camera_pitch_input_value_label">
+             <property name="text">
+              <string>Not Inverted</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="3">
+            <widget class="QLabel" name="camera_yaw_input_value_label">
+             <property name="text">
+              <string>Not Inverted</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="game_tab">
+       <attribute name="title">
+        <string>GAME</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QGroupBox" name="groupBox_4">
+          <property name="title">
+           <string>GAMEPLAY</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_8">
+           <item row="2" column="4">
+            <widget class="QPushButton" name="toggle_next_slow_down_time_button">
+             <property name="text">
+              <string>&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_33">
+             <property name="text">
+              <string>Slow Down Time When Selecting Equipment</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QPushButton" name="toggle_previous_slow_down_time_button">
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QPushButton" name="toggle_previous_auto_saving_base_button">
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QLabel" name="auto_saving_base_value_label">
+             <property name="text">
+              <string>Enabled</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QLabel" name="slow_down_time_value_label">
+             <property name="text">
+              <string>Enabled</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QLabel" name="difficulty_value_label">
+             <property name="text">
+              <string>Normal</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QPushButton" name="toggle_next_auto_saving_base_button">
+             <property name="text">
+              <string>&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_32">
+             <property name="text">
+              <string>Time- and collectible-based auto-saving</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QPushButton" name="toggle_previous_difficulty_button">
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QPushButton" name="toggle_next_difficulty_button">
+             <property name="text">
+              <string>&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_34">
+             <property name="text">
+              <string>Inertia Dampeners Button Mode</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QPushButton" name="toggle_previous_inertia_button_mode_button">
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_31">
+             <property name="text">
+              <string>Difficulty</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="4">
+            <widget class="QPushButton" name="toggle_next_inertia_button_mode_button">
+             <property name="text">
+              <string>&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QLabel" name="inertia_button_mode_value_label">
+             <property name="text">
+              <string>Toggle</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <spacer name="horizontalSpacer_8">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_5">
+          <property name="title">
+           <string>DISPLAY</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_9">
+           <item row="1" column="3">
+            <widget class="QLabel" name="show_xp_numbers_value_label">
+             <property name="text">
+              <string>Off</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QLabel" name="show_cockpit_hud_value_label">
+             <property name="text">
+              <string>Hide</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_40">
+             <property name="text">
+              <string>Show XP Numbers</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <spacer name="horizontalSpacer_9">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="2">
+            <widget class="QPushButton" name="toggle_previous_show_xp_numbers_button">
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QPushButton" name="toggle_previous_show_cockpit_hud_button">
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QLabel" name="show_damage_numbers_value_label">
+             <property name="text">
+              <string>On</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QLabel" name="markers_color_value_label">
+             <property name="text">
+              <string>White</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_39">
+             <property name="text">
+              <string>Show Damage Numbers</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QPushButton" name="toggle_previous_markers_color_button">
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QPushButton" name="toggle_previous_show_damage_numbers_button">
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_42">
+             <property name="text">
+              <string>HUD Markers Color</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_41">
+             <property name="text">
+              <string>Show HUD In Cockpit</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QPushButton" name="toggle_next_show_damage_numbers_button">
+             <property name="text">
+              <string>&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QPushButton" name="toggle_next_show_xp_numbers_button">
+             <property name="text">
+              <string>&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="4">
+            <widget class="QPushButton" name="toggle_next_show_cockpit_hud_button">
+             <property name="text">
+              <string>&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="4">
+            <widget class="QPushButton" name="toggle_next_markers_color_button">
+             <property name="text">
+              <string>&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QGroupBox" name="markers_icons_group_box">
+             <property name="title">
+              <string/>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <property name="spacing">
+               <number>12</number>
+              </property>
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item>
+               <spacer name="horizontalSpacer_7">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QLabel" name="marker_icon_1_label">
+                <property name="text">
+                 <string>Icon</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="marker_icon_2_label">
+                <property name="text">
+                 <string>Icon</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="marker_icon_3_label">
+                <property name="text">
+                 <string>Icon</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_10">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="apply_settings_button">
+        <property name="text">
+         <string>Apply Settings</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
